@@ -1,9 +1,9 @@
 def quick_sort(string):
     if not string:
         return []
-    return (quick_sort([letter for letter in string[1:] if letter < string[0]])
+    return (quick_sort([x for x in string[1:] if x < string[0]])
             + [string[0]] +
-            quick_sort([letter for letter in string[1:] if letter >= string[0]]))
+            quick_sort([x for x in string[1:] if x >= string[0]]))
 
 
 def is_anagram(first_string, second_string):
